@@ -6,6 +6,16 @@ app.get("/", (req, res) => {
   //res.send me jo likha hai wo home page pe show hoga
   res.send(`Hello world from the server, you are on Home Page`);
 });
+
+//MIDDLEWARE=> user about page ko jb bhi access karega yaa about icon pe click karega toh
+//Middleare check karega ki user logged in hai ya nhi agr user already loggedin hai
+//toh wo about page ko access karega agr user new hai ya loggedin nhi hai
+//toh use signup yaa login page pe redirect kr denge 
+//then user signup/login krne k baad about page access kr skta hai but usme keval particular user
+//jo user login kr rha hai usi ki details about page me dikhegi na ki dusre ki details
+//that's why yeh ek middle ki trh work kr rha hai
+
+
 //ALL PAGES =>HOME,ABOUT,CONTACT,SIGNIN,SIGNUP KO BACKEND KI HELP SE CREATE KRO.....
 // now about page ke liye app.get likho
 app.get("/about",(req,res)=>{
